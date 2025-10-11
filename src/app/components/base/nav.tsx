@@ -32,18 +32,24 @@ export default function Nav() {
       <ul className="[&>li]:flex [&>li]:py-1 [&>li]:items-center [&>li:not(:last-child)]:mb-4 pr-2.5">
         {routes.map((route) => (
           <li key={route.path}>
-            <Link href={route.path} className="block hover:underline">
-              {route.title}
-            </Link>
-            {pathname === route.path && (
+            {route.enabled ? (
               <>
-                <ChevronRightIcon className="ml-auto hidden lg:block" />
+                <Link href={route.path} className="block hover:underline">
+                  {route.title}
+                </Link>
+                {pathname === route.path && (
+                  <>
+                    <ChevronRightIcon className="ml-auto hidden lg:block" />
+                  </>
+                )}
               </>
-            )}
-            {!route.enabled && (
-              <Chip size="sm" isDisabled color="default" className="ml-3">
-                Em breve
-              </Chip>
+            ) : (
+              <>
+                <span>{route.title}</span>
+                <Chip size="sm" isDisabled color="default" className="ml-3">
+                  Em breve
+                </Chip>
+              </>
             )}
           </li>
         ))}
