@@ -43,7 +43,7 @@ export default function RootLayout({
                 <Nav />
               </div>
               <div className="w-full">
-                <div className="w-[calc(100vw-46px)] lg:w-full max m-auto pt-6 pb-4 lg:px-6 pr-4 h-[calc(100vh-110px)] flex rounded-2xl bg-[#CBC8D7] bg-[linear-gradient(245deg,rgba(203,200,215,1)_12%,rgba(124,119,150,1)_87%)] shadow-inner">
+                <div className="w-[calc(100vw-30px)] lg:w-full max m-auto pt-6 pb-4 lg:px-6 pr-4 h-[calc(100vh-110px)] flex rounded-2xl bg-[#CBC8D7] bg-[linear-gradient(245deg,rgba(203,200,215,1)_12%,rgba(124,119,150,1)_87%)] inset-shadow-sm inset-shadow-black-500/50">
                   <Controls />
                   <Main>{children}</Main>
                 </div>
