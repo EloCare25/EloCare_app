@@ -16,10 +16,10 @@ export default function Controls() {
   };
 
   return (
-    <div className="lg:hidden relative -left-4 bg-[#b3b0c1] -my-6 -ml-2.5 rounded-tl-2xl rounded-bl-2xl">
+    <div className="lg:hidden relative -top-6 h-[calc(100%+24px)] bg-[#666085] rounded-tl-2xl rounded-bl-2xl mr-4">
       <div className="flex align-middle items-center justify-between p-1">
         <button
-          className="hover:bg-[#9390a2] rounded-lg p-2 cursor-pointer"
+          className="hover:text-gray-400 rounded-lg p-2 cursor-pointer"
           onClick={toggle}
         >
           <svg

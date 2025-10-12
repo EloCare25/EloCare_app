@@ -1,7 +1,14 @@
-export const routes = [
+type Route = {
+  path: string;
+  title: string;
+  enabled: boolean;
+  icon?: string;
+};
+
+export const routes: Route[] = [
   {
-    path: "/ubs",
-    title: "Buscar UBS (teste)",
+    path: "/",
+    title: "Home",
     enabled: true,
   },
   {
@@ -17,6 +24,11 @@ export const routes = [
   {
     path: "/telemedicina",
     title: "Telemedicina",
+    enabled: false
+  },
+  {
+    path: "/transporte",
+    title: "Transporte",
     enabled: false
   }
 ]

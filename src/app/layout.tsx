@@ -34,16 +34,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-4`}
       >
         <UiProvider>
-          <div className="lg:grid lg:grid-cols-12 w-full max-w-[1440px] m-auto gap-4 justify-start">
-            <div className="col-span-full mb-4 lg:mb-0">
+          <div className="flex flex-col w-full max-w-[1440px] m-auto gap-4 justify-start">
+            <div className="mb-4 lg:mb-0 w-full">
               <Header />
             </div>
-            <div className="flex lg:contents max-lg:[body.menu-opened_&]:-translate-x-0 max-lg:-translate-x-[230px] transition-transform">
-              <div className="lg:col-span-3 2xl:col-span-2 min-w-[230px]">
+            <div className="flex w-full max-lg:[body.menu-opened_&]:-translate-x-0 max-lg:-translate-x-[220px] transition-transform">
+              <div className="min-w-[220px]">
                 <Nav />
               </div>
-              <div className="lg:col-span-9 2xl:col-span-10 w-full">
-                <div className="w-[calc(100vw-36px)] lg:w-full max m-auto p-6 bg-[#cbc8d7] h-[calc(100vh-90px)] flex rounded-2xl">
+              <div className="w-full">
+                <div className="w-[calc(100vw-46px)] lg:w-full max m-auto pt-6 pb-4 lg:px-6 pr-4 h-[calc(100vh-110px)] flex rounded-2xl bg-[#CBC8D7] bg-[linear-gradient(245deg,rgba(203,200,215,1)_12%,rgba(124,119,150,1)_87%)] shadow-inner">
                   <Controls />
                   <Main>{children}</Main>
                 </div>

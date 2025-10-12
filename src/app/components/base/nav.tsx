@@ -28,10 +28,10 @@ const ChevronRightIcon = ({ className = "" }: { className?: string }) => {
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="mt-1 text-[#767383]">
-      <ul className="[&>li]:flex [&>li]:py-1 [&>li]:items-center [&>li:not(:last-child)]:mb-4 pr-2.5">
+    <nav className="mt-1 text-[#767383] text-sm">
+      <ul className="[&>li]:flex [&>li]:py-1 [&>li]:items-center [&>li:not(:last-child)]:mb-2 pr-3">
         {routes.map((route) => (
-          <li key={route.path}>
+          <li key={route.path} className={pathname === route.path ? 'font-semibold' : ''}>
             {route.enabled ? (
               <>
                 <Link href={route.path} className="block hover:underline">
@@ -39,7 +39,7 @@ export default function Nav() {
                 </Link>
                 {pathname === route.path && (
                   <>
-                    <ChevronRightIcon className="ml-auto hidden lg:block" />
+                    <ChevronRightIcon className="ml-auto mr-2 hidden lg:block" />
                   </>
                 )}
               </>
