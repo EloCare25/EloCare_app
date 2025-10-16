@@ -22,7 +22,7 @@ export default function ClinicsList({ data }: { data: Clinic[] }) {
               className="w-full object-cover h-[240px]"
               radius="lg"
               shadow="sm"
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d"
+              src={clinic.imagem!}
               width="100%"
             />
           </CardBody>
