@@ -16,7 +16,7 @@ export default function Controls() {
   };
 
   return (
-    <div className="lg:hidden relative -top-6 h-[calc(100%+40px)] bg-[#666085] rounded-tl-2xl rounded-bl-2xl mr-4">
+    <div className="lg:hidden relative -top-6 h-[calc(100%+40px)] rounded-tl-2xl rounded-bl-2xl mr-4">
       <div className="flex align-middle items-center justify-between p-1">
         <button
           className="hover:text-gray-400 rounded-lg p-2 cursor-pointer"

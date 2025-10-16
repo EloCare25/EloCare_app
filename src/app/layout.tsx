@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-4 bg-[#f4f4f4] bg-[linear-gradient(63deg,rgba(#f4f4f4)_7%,rgba(242,242,242,1)_83%)]  text-[#333]`}
       >
         <UiProvider>
           <div className="flex flex-col w-full max-w-[1440px] m-auto gap-4 justify-start">
@@ -43,7 +43,7 @@ export default function RootLayout({
                 <Nav />
               </div>
               <div className="w-full">
-                <div className="w-[calc(100vw-30px)] lg:w-full max m-auto pt-6 pb-4 lg:px-6 pr-4 h-[calc(100vh-110px)] flex rounded-2xl bg-[#CBC8D7] bg-[linear-gradient(245deg,rgba(203,200,215,1)_12%,rgba(124,119,150,1)_87%)] inset-shadow-sm inset-shadow-black-500/50">
+                <div className="w-[calc(100vw-30px)] lg:w-full max m-auto pt-6 pb-4 lg:px-6 pr-4 h-[calc(100vh-110px)] flex rounded-2xl bg-[#f2f2f2] inset-shadow-sm inset-shadow-black-500/50 border-[#dcdcdc] border-1">
                   <Controls />
                   <Main>{children}</Main>
                 </div>
@@ -55,3 +55,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+// bg-[linear-gradient(245deg,rgba(203,200,215,1)_12%,rgba(124,119,150,1)_87%)]
+// /bg-[#cfcdda]
+// border-[#928ea8]

@@ -1,5 +1,6 @@
 type Route = {
-  path: string;
+  id: string;
+  pathname: string;
   title: string;
   enabled: boolean;
   icon?: string;
@@ -7,27 +8,26 @@ type Route = {
 
 export const routes: Route[] = [
   {
-    path: "/",
-    title: "Home",
-    enabled: true,
-  },
-  {
-    path: "/clinicas",
+    id: "clinicas",
+    pathname: "/clinicas",
     title: "Clínicas",
-    enabled: false
+    enabled: true
   },
   {
-    path: "/equipamentos",
+    id: "equipamentos",
+    pathname: "/equipamentos",
     title: "Equipamentos",
     enabled: false
   },
   {
-    path: "/telemedicina",
+    id: "telemedicina",
+    pathname: "/telemedicina",
     title: "Telemedicina",
     enabled: false
   },
   {
-    path: "/transporte",
+    id: "transporte",
+    pathname: "/transporte",
     title: "Transporte",
     enabled: false
   }
