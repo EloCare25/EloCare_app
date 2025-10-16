@@ -22,5 +22,15 @@ export function getAllClinics() {
     FROM clinicas
     ORDER BY razao_social ASC
   `);
-  return stmt.all();
+  return stmt.all() as Clinic[];
+}
+
+export function getClinicById(id: number | string) {
+  const db = getDb();
+  const stmt = db.prepare(`
+    SELECT *
+    FROM clinicas
+    WHERE id_clinica = ?
+  `);
+  return stmt.get(id) as Clinic;
 }
