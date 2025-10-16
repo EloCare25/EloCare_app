@@ -24,7 +24,7 @@ export default function Header() {
         <h1 className="font-semibold">
           <Link href="/">EloCare</Link>
         </h1>
-        <span className="inline-flex lg:hidden">
+        <span className="inline-flex">
           / {currRoute?.title ?? ""}
         </span>
       </div>
