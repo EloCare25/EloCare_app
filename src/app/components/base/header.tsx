@@ -5,10 +5,9 @@ import { User } from "@heroui/user";
 import { usePathname } from "next/navigation";
 import { routes } from "@/app/config/routes";
 
-
 export default function Header() {
   const pathname = usePathname();
-  const [currRoute] = routes.filter(route => route.pathname === pathname);
+  const [currRoute] = routes.filter((route) => route.pathname === pathname);
 
   return (
     <div className="flex align-middle items-center justify-between">
@@ -25,9 +24,15 @@ export default function Header() {
         <h1 className="font-semibold">
           <Link href="/">EloCare</Link>
         </h1>
-        <span className="inline-flex lg:hidden">/ {currRoute?.title ?? ""}</span>
+        <span className="inline-flex lg:hidden">
+          / {currRoute?.title ?? ""}
+        </span>
       </div>
-      <User name="" className="cursor-pointer" />
+      <User
+        name=""
+        className="cursor-pointer"
+        avatarProps={{ name: "Admin", isBordered: true, color: "default" }}
+      />
     </div>
   );
 }

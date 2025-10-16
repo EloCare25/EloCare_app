@@ -1,30 +1,16 @@
-"use client";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-  Image,
-} from "@heroui/react";
+import { get } from "@/app/helpers/fetch";
+import ClinicsList from "./components/clinics-list";
+import { getAllClinics, type Clinic } from "@/app/lib/queries";
 
-export default function Home() {
-  return (
-    <div>
-      <Card isPressable shadow="sm">
-        <CardBody className="overflow-visible p-0">
-          <Image
-            className="w-full object-cover h-[240px]"
-            radius="lg"
-            shadow="sm"
-            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d"
-            width="100%"
-          />
-        </CardBody>
-        <CardFooter className="text-small justify-between">
-          <b>Clínica 1</b>
-        </CardFooter>
-      </Card>
-    </div>
-  );
+export default async function ClinicsPage() {
+  try {
+    const res = await get<Clinic[]>(
+      `${process.env.NEXT_PUBLIC_SITE_DOMAIN}/api/v1/clinics`,
+    );
+    if (res.data) {
+      return <ClinicsList data={res.data} />;
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }

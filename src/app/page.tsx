@@ -27,6 +27,7 @@ export default function Home() {
       {routes.map((route) => {
         return (
           <Card
+            key={route.id}
             isPressable
             isDisabled={!route.enabled}
             shadow="sm"
