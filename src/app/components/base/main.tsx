@@ -7,10 +7,10 @@ export default function Main({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div onClickCapture={closeMenu} className="w-full">
-      <ScrollShadow hideScrollBar className="h-full">
-        <div className="h-[calc(100vh-180px)]">{children}</div>
-      </ScrollShadow>
-    </div>
+    <ScrollShadow hideScrollBar className="h-full">
+      <div onClickCapture={closeMenu}>
+        {children}
+      </div>
+    </ScrollShadow>
   );
 }

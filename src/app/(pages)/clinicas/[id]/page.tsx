@@ -12,9 +12,7 @@ export default async function ClinicPage({ params }: PageProps) {
     const clinic = getClinicById(id);
 
     return clinic ? (
-      <div className="md:flex">
-        <ClinicCard clinic={clinic} />
-      </div>
+      <ClinicCard clinic={clinic} />
     ) : (
       <div className="flex place-content-center h-full items-center flex-col">
         Clínica não encontrada
