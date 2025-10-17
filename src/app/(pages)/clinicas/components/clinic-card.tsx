@@ -35,11 +35,11 @@ export default function ClinicCard({ clinic }: { clinic: Clinic }) {
           </address>
           <h3 className="text-xl mt-8">Contato</h3>
           <dl>
-            <div className="flex gap-0.5">
+            <div className="flex flex-col md:flex-row gap-1">
               <dt>Horário de funcionamento:</dt>
               <dd>{clinic.horario_funcionamento}</dd>
             </div>
-            <div className="flex gap-0.5">
+            <div className="flex flex-col md:flex-row gap-1 mt-2">
               <dt>telefone:</dt>
               <dd>{clinic.telefone_comercial}</dd>
             </div>
