@@ -48,16 +48,15 @@ export function getClinicById(id: number | string) {
 }
 
 export function getAllTransports() {
-  return [
-    {
-      id: 1,
-      name: "Transporte A",
-      description: "Descrição do transporte A",
-    },
-    {
-      id: 2,
-      name: "Transporte B",
-      description: "Descrição do transporte B",
-    },
-  ];
+  const db = getDb();
+  const stmt = db.prepare(`
+    SELECT *
+    FROM clinicas
+    WHERE id_clinica > 5
+    ORDER BY estado DESC
+  `);
+  return stmt.all().map((c, i) => ({
+    ...(c as {}),
+    imagem: temp_images[i],
+  })) as Clinic[];
 }

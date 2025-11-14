@@ -1,16 +1,11 @@
 import { getAllTransports } from "@/app/lib/queries";
+import TransportClinicsList from "./components/transport-clinics-list";
 
 export default async function TransportsPage() {
   try {
-    const transports = getAllTransports();
+    const clinics = getAllTransports();
 
-    return (
-      <div>
-        {transports.map((transport) => (
-          <div key={transport.id}>{transport.name}</div>
-        ))}
-      </div>
-    );
+    return <TransportClinicsList data={clinics} />;
   } catch (error) {
     console.error("Error rendering TransportsPage:", error);
   }

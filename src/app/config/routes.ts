@@ -14,6 +14,12 @@ export const routes: Route[] = [
     enabled: true
   },
   {
+    id: "transporte",
+    pathname: "/transporte",
+    title: "Transporte",
+    enabled: true
+  },
+  {
     id: "equipamentos",
     pathname: "/equipamentos",
     title: "Equipamentos",
@@ -24,11 +30,5 @@ export const routes: Route[] = [
     pathname: "/telemedicina",
     title: "Telemedicina",
     enabled: false
-  },
-  {
-    id: "transporte",
-    pathname: "/transporte",
-    title: "Transporte",
-    enabled: true
   }
 ]
