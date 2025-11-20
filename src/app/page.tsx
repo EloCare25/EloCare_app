@@ -8,7 +8,8 @@ import {
   Image,
   Chip,
 } from "@heroui/react";
-import { routes } from "@/app/config/routes";
+import { getRoutesForProfile } from "@/app/config/routes";
+import { useProfile } from "@/app/providers/profile-provider";
 import { useRouter } from "next/navigation";
 
 const cardImages = {
@@ -21,6 +22,8 @@ const cardImages = {
 
 export default function Home() {
   const router = useRouter();
+  const { profile } = useProfile();
+  const routes = getRoutesForProfile(profile);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

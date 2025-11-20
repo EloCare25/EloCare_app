@@ -60,3 +60,28 @@ export function getAllTransports() {
     imagem: temp_images[i],
   })) as Clinic[];
 }
+
+export interface Equipment {
+  id_equipamento: number;
+  id_fornecedor: number;
+  nome: string;
+  descricao: string | null;
+  categoria: string | null;
+  marca: string | null;
+  modelo: string | null;
+  preco: number | null;
+  estoque: number;
+  status: string;
+  imagem_url: string | null;
+  data_cadastro: string;
+}
+
+export function getAllEquipments() {
+  const db = getDb();
+  const stmt = db.prepare(`
+    SELECT *
+    FROM equipamentos
+    ORDER BY nome ASC
+  `);
+  return stmt.all() as Equipment[];
+}

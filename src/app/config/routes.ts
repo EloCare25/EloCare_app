@@ -1,9 +1,12 @@
+import type { ProfileType } from "@/app/types/profile";
+
 type Route = {
   id: string;
   pathname: string;
   title: string;
   enabled: boolean;
   icon?: string;
+  profiles: ProfileType[];
 };
 
 export const routes: Route[] = [
@@ -11,24 +14,32 @@ export const routes: Route[] = [
     id: "clinicas",
     pathname: "/clinicas",
     title: "Clínicas",
-    enabled: true
+    enabled: true,
+    profiles: ["user"]
   },
   {
     id: "transporte",
     pathname: "/transporte",
     title: "Transporte",
-    enabled: true
+    enabled: true,
+    profiles: ["user"]
   },
   {
     id: "equipamentos",
     pathname: "/equipamentos",
     title: "Equipamentos",
-    enabled: false
+    enabled: true,
+    profiles: ["professional"]
   },
   {
     id: "telemedicina",
     pathname: "/telemedicina",
     title: "Telemedicina",
-    enabled: false
+    enabled: true,
+    profiles: ["professional"]
   }
 ]
+
+export function getRoutesForProfile(profile: ProfileType): Route[] {
+  return routes.filter(route => route.profiles.includes(profile));
+}

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { User } from "@heroui/user";
 import { usePathname } from "next/navigation";
 import { routes } from "@/app/config/routes";
+import ProfileSwitcher from "./profile-switcher";
 
 export default function Header() {
   const pathname = usePathname();
@@ -28,11 +28,7 @@ export default function Header() {
           / {currRoute?.title ?? ""}
         </span>
       </div>
-      <User
-        name=""
-        className="cursor-pointer"
-        avatarProps={{ name: "Admin", isBordered: true, color: "default" }}
-      />
+      <ProfileSwitcher />
     </div>
   );
 }

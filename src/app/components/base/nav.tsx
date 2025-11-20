@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { Chip } from "@heroui/react";
 import { usePathname } from "next/navigation";
-import { routes } from "@/app/config/routes";
+import { getRoutesForProfile } from "@/app/config/routes";
+import { useProfile } from "@/app/providers/profile-provider";
 
 const ChevronRightIcon = ({ className = "" }: { className?: string }) => {
   return (
@@ -27,6 +28,8 @@ const ChevronRightIcon = ({ className = "" }: { className?: string }) => {
 
 export default function Nav() {
   const pathname = usePathname();
+  const { profile } = useProfile();
+  const routes = getRoutesForProfile(profile);
 
   return (
     <nav className="mt-1 text-sm">
