@@ -22,11 +22,11 @@ const temp_images = [
   "https://images.unsplash.com/photo-1453847668862-487637052f8a",
   "https://images.unsplash.com/photo-1616391182219-e080b4d1043a",
   "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
-  "https://unsplash.com/photos/a-room-filled-with-lots-of-medical-equ",
-  "https://unsplash.com/photos/a-room-with-a-dentist-chair-lights-and-other-medical-equipment-JTEyYyGQz8U",
-  "https://unsplash.com/photos/a-dentist-chair-with-a-red-seat-in-a-room-fyD9fsd5gs4",
-  "https://unsplash.com/photos/a-room-with-a-desk-and-a-chair-in-it-6Z3_IllegYM"
-  "https://unsplash.com/photos/blue-and-white-bed-with-blue-bed-linen-bxyV1SfGMFU",
+  "https://images.unsplash.com/photo-1603506161877-f274a49931b7",
+  "https://images.unsplash.com/photo-1582798993202-b2d35d9620be",
+  "https://images.unsplash.com/photo-1550998592-38379c536449",
+  "https://images.unsplash.com/photo-1584281896894-3a5570d5885e",
+  "https://images.unsplash.com/photo-1505751172876-fa1923c58548",
 ];
 
 export function getAllClinics() {
