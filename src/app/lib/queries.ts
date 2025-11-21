@@ -22,7 +22,7 @@ const temp_images = [
   "https://images.unsplash.com/photo-1453847668862-487637052f8a",
   "https://images.unsplash.com/photo-1616391182219-e080b4d1043a",
   "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
-  "https://images.unsplash.com/photo-1603506161877-f274a49931b7",
+  "https://plus.unsplash.com/premium_photo-1675686363477-c28d5bf65adb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1582798993202-b2d35d9620be",
   "https://images.unsplash.com/photo-1550998592-38379c536449",
   "https://images.unsplash.com/photo-1584281896894-3a5570d5885e",
