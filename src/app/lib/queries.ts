@@ -22,7 +22,7 @@ const temp_images = [
   "https://images.unsplash.com/photo-1453847668862-487637052f8a",
   "https://images.unsplash.com/photo-1616391182219-e080b4d1043a",
   "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
-  "https://unsplash.com/photos/a-room-filled-with-lots-of-medical-equipment-CgcbCvIlbdE",
+  "https://unsplash.com/photos/a-room-filled-with-lots-of-medical-equ",
   "https://unsplash.com/photos/a-room-with-a-dentist-chair-lights-and-other-medical-equipment-JTEyYyGQz8U",
   "https://unsplash.com/photos/a-dentist-chair-with-a-red-seat-in-a-room-fyD9fsd5gs4",
   "https://unsplash.com/photos/a-room-with-a-desk-and-a-chair-in-it-6Z3_IllegYM"
@@ -38,7 +38,7 @@ export function getAllClinics() {
   `);
   return stmt.all().map((c, i) => ({
     ...(c as {}),
-    imagem: temp_images[i],
+    imagem: temp_images[i % temp_images.length],
   })) as Clinic[];
 }
 
